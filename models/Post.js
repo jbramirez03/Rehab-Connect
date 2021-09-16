@@ -15,11 +15,6 @@ Post.init(
             type: DataTypes.TEXT,
             allowNull: false
         },
-        date_created: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.Now
-        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -33,7 +28,12 @@ Post.init(
                 model: 'milestones',
                 key: 'id'
             }
-        }
+        },
+        date_created: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW
+        },
     },
     {
         sequelize,
