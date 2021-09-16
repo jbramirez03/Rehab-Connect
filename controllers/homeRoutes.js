@@ -25,6 +25,7 @@ router.get('/', async (req, res) => {
         const milestones = milestonesData.map(milestone => milestone.get({plain: true}));
         res.render('homepage', {
             milestones,
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         res.json(err);
@@ -61,7 +62,8 @@ router.get('/milestone/:id', async (req, res) => {
 
         const milestone = milestoneData.get({plain: true});
         res.render('milestone', {
-            ...milestone
+            ...milestone,
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         res.json(err);
