@@ -9,8 +9,14 @@
 </head>
 <body>
     <nav>
-        <a>Lorem ipsum</a>
+        {{#if logged_in}}
+        <a href="/">Home</a> |
         <a id="logout" href="#">Logout</a>
+        {{!-- <a href="/post">Post</a> --}}
+        {{else}}
+        <a href="/login">login</a>
+        <a href="/signup">Sign up</a>
+        {{/if}}
     </nav>
     <main>
         {{{body}}}
