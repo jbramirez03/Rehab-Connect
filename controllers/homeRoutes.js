@@ -3,9 +3,26 @@ const {Post, Milestone, User} = require('../models');
 
 router.get('/', async (req, res) => {
     try {
-        const milestonesData = await Milestone.findAll({});
+        const milestonesData = await Milestone.findAll({
+            include: [
+                {
+                    model: Post,
+                    attributes: [
+                        'post_text',
+                        'date_created',
+                        'user_id',
+                        'milestone_id'
+                    ],
+                    include: [
+                        {
+                            model: User,
+                            attributes: ['username']
+                        }
+                    ]
+                }
+            ]
+        });
         const milestones = milestonesData.map(milestone => milestone.get({plain: true}));
-        console.log(milestones);
         res.render('homepage', {
             milestones,
         });
@@ -16,7 +33,26 @@ router.get('/', async (req, res) => {
 
 router.get('/milestone/:id', async (req, res) => {
     try {
-        const milestoneData = await Milestone.findByPk(req.params.id);
+        const milestoneData = await Milestone.findByPk(req.params.id,
+            {
+                include: [
+                    {
+                        model: Post,
+                        attributes: [
+                        'post_text',
+                        'date_created',
+                        'user_id',
+                        'milestone_id'
+                    ],
+                    include: [
+                        {
+                            model: User,
+                            attributes: ['username']
+                        }
+                    ]
+                  }
+                ]
+            });
 
         if(!milestoneData) {
             res.status(404).json({message: 'No milestone found with that id'});
@@ -24,7 +60,6 @@ router.get('/milestone/:id', async (req, res) => {
         }
 
         const milestone = milestoneData.get({plain: true});
-        console.log(milestone);
         res.render('milestone', {
             ...milestone
         });
