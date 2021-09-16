@@ -1,5 +1,5 @@
 const { Milestone } = require('../../models');
-const router = require('./postRoutes');
+const router = require('express').Router();
 
 router.post('/', async (req, res) => {
     try {
