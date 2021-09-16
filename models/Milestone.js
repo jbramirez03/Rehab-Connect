@@ -22,16 +22,10 @@ Milestone.init({
         type: DataTypes.INTEGER,
         references: {
             model: 'users',
-            key: 'id'
+            key: 'id',
+            unique: false
         }
     },
-    post_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'posts',
-            key: 'id'
-        }
-    }
 },
     {
         sequelize,
