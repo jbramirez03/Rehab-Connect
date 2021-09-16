@@ -35,13 +35,6 @@ User.init(
                 len: [6]
             }
         },
-        post_id: {
-            type: DataTypes.STRING,
-            references: {
-                model: 'posts',
-                key: 'id'
-            }
-        }
     },
     {
         hooks: {

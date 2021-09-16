@@ -18,14 +18,6 @@ Milestone.init({
         type: DataTypes.TEXT,
         allowNull: false
     },
-    user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'users',
-            key: 'id',
-            unique: false
-        }
-    },
 },
     {
         sequelize,
