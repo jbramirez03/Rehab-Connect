@@ -2,6 +2,7 @@
 <div>
     <p>{{post.post_text}}</p>
     <p>Posted by: {{post.user.username}}</p>
+    <p>Date posted: {{format_date date_created}}</p>
 </div>
 {{/each}}
 
