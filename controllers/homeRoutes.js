@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const {Post, Milestone, User} = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
@@ -32,7 +33,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/milestone/:id', async (req, res) => {
+router.get('/milestone/:id', withAuth, async (req, res) => {
     try {
         const milestoneData = await Milestone.findByPk(req.params.id,
             {
