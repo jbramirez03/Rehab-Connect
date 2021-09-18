@@ -1,4 +1,4 @@
-
+const {Milestone} = require('../models');
 
 const milestoneData = [
     {
