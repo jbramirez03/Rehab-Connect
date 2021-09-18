@@ -44,6 +44,9 @@ User.init(
         last_name: {
             type: DataTypes.STRING,
         },
+        nickname: {
+            type: DataTypes.STRING
+        }
     },
     {
         hooks: {

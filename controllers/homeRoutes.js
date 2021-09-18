@@ -80,4 +80,14 @@ router.get("/signup", (req, res) => {
   res.redirect("/");
 });
 
+router.get('/profile', async (req, res) => {
+  try {
+    const userData = User.findByPk(req.session.user_id);
+    const user = (await userData).get({plain: true});
+    console.log(user);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
