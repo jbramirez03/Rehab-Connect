@@ -1,0 +1,15 @@
+{{#if posts.length}}
+<section>
+  <h4 class="m-4">Your Posts</h4>
+    {{#each posts as |post|}}
+      {{> dashboard-postinfo post}}
+      
+    {{/each}}
+
+</section>
+{{/if}}
+
+<div class="d-grid gap-2 col-4 mx-auto">
+    <button type="submit" class="btn btn-secondary m-4"><a class="text-decoration-none" href="/dashboard/new">+ New Post</a></button>
+</div>
+
