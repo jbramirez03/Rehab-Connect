@@ -84,7 +84,10 @@ router.get('/profile', async (req, res) => {
   try {
     const userData = User.findByPk(req.session.user_id);
     const user = (await userData).get({plain: true});
-    console.log(user);
+    // console.log(user);
+    res.render('profile', {
+      ...user
+    });
   } catch (err) {
     res.status(500).json(err);
   }
