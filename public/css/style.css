@@ -1,0 +1,24 @@
+body {
+    font-family: 'Amiri', serif;
+    /* font-family: "Cinzel", serif; */
+    background-image: url("/images/robert-haverly-o_3auwMBoN8-unsplash.jpg");
+    background-size: cover;
+    height: 100vh;
+    color: white;
+  }
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  .customCard {
+    opacity: 0.9;
+   
+  }
+  .user-comment {
+    font-size: 1.3rem;
+  }
+  
+  a {
+    color: rgb(247, 242, 242);
+    text-shadow: 2px 2px 8px #000000;
+  }
+  
