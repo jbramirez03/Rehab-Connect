@@ -1,0 +1,25 @@
+{{!-- <div>
+    <h2><a href="/milestone/{{id}}">{{name}}</a></h2>
+    <p>{{description}}</p>
+</div> --}}
+
+<div class="card
+          align
+          mx-4
+          mt-4
+          bg-dark bg-gradient
+          text-white
+          customCard position-relative">
+  <div class="card-header">
+    <h4 class="float-start">
+      <a class="text-decoration-none" href="/milestone/{{id}}">{{name}}</a>
+    </h4>
+  </div>
+  <hr />
+  <p class="card-body">{{description}}</p>
+
+  <div class="position-absolute bottom-0 end-0">
+    <a class="me-3 text-decoration-none" href="/post/{{id}}">{{posts.length}} Posts</a>
+  </div>
+
+</div>

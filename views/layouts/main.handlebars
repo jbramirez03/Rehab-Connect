@@ -31,7 +31,7 @@
           <div class=" navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
              
-              {{#if loggedIn}}
+              {{#if logged_in}}
           <li class="nav-item">
                 <a class="nav-link active" href="/">Home</a>
               </li>
@@ -48,6 +48,9 @@
            <li class="nav-item">
                 <a class="nav-link active" href="/login">Login</a>
               </li>
+               <li class="nav-item">
+                <a class="nav-link active" href="/signup">Signup</a>
+              </li>
             {{/if}}
             </ul>
 
@@ -59,7 +62,7 @@
     <main  class="d-flex justify-content-center flex-column " >
         {{{body}}}
     </main>
-     {{#if loggedIn}}
+     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
 

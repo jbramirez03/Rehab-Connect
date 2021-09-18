@@ -1,5 +1,4 @@
-<div>
-  {{#each this}}
+
     <div class="card
           align
           mx-4
@@ -10,12 +9,10 @@
         <h4 class="card-header"></h4>
         <section class="card-body">
             <div>
-                {{comment_text}}
+                {{post_text}}
             </div>
             <div>
-                {{user.username}}, {{format_date created_at}}
+                {{user.username}}, {{format_date date_created}}
             </div>
         </section>
     </div>
-  {{/each}}
-</div>

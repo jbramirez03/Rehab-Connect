@@ -21,8 +21,8 @@ router.get("/", withAuth, async (req, res) => {
     const posts = dbPostsData.map(post =>
       post.get({ plain: true })
     );
-    // res.render("dashboard", { milestones, loggedIn: true });
-    console.log(posts);
+    res.render("dashboard1", { posts, loggedIn: true });
+    // console.log(posts);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
