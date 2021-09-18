@@ -31,40 +31,24 @@ router.get("/", withAuth, async (req, res) => {
 
 router.get("/edit/:id", withAuth, async (req, res) => {
   try {
-    const milestonesData = await milestone.findOne({
-      where: {
-        id: req.params.id,
-      },
-      attributes: ["id", "title", "content", "created_at"],
+    const dbPostData = await Post.findByPk(req.params.id, {
+      attributes: ["user_id", "id", "post_text", "date_created"],
       include: [
         {
           model: User,
           attributes: ["username"],
         },
-        {
-          model: Comment,
-          attributes: [
-            "id",
-            "comment_text",
-            "milestone_id",
-            "user_id",
-            "created_at",
-          ],
-          include: {
-            model: User,
-            attributes: ["username"],
-          },
-        },
       ],
     });
 
-    if (!milestonesData) {
+    if (!dbPostData) {
       res.status(404).json({ message: "No milestone found with this id" });
       return;
     }
 
-    const milestone = milestonesData.get({ plain: true });
-    res.render("edit-milestone", { milestone, loggedIn: true });
+    const post = dbPostData.get({ plain: true });
+    // res.render("edit-milestone", { post, loggedIn: true });
+    console.log(post);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
