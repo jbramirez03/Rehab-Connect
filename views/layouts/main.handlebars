@@ -9,14 +9,11 @@
     <link rel="stylesheet" src="/css/style.css">
 </head>
 <body>
-    <nav class="teal lighten-1">
+  <nav class="teal lighten-1">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Rehab-Connect</a>
+      <a href="#" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <a href="#!" class="brand-logo">Logo</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        {{#if logged_in}}
+       {{#if logged_in}}
         <li><a href="/">Home</a></li>
         <li><a id="logout" href="#">Logout</a></li>
         {{else}}
@@ -26,17 +23,7 @@
       </ul>
     </div>
   </nav>
-
-  <ul class="sidenav" id="mobile-demo">
-    {{#if logged_in}}
-        <li><a href="/">Home</a></li>
-        <li><a id="logout" href="#">Logout</a></li>
-        {{else}}
-        <li><a href="/login">Login</a></li>
-        <li><a href="/signup">Signup</a></li>
-        {{/if}}
-  </ul>
-
+    
     <main>
         {{{body}}}
     </main>
