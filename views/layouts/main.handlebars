@@ -1,36 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rehab-Connect</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" src="/css/style.css">
-</head>
-<body>
-  <nav class="teal lighten-1">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-       {{#if logged_in}}
-        <li><a href="/">Home</a></li>
-        <li><a id="logout" href="#">Logout</a></li>
-        {{else}}
-        <li><a href="/login">Login</a></li>
-        <li><a href="/signup">Signup</a></li>
-        {{/if}}
-      </ul>
-    </div>
-  </nav>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css">
     
-    <main>
+   
+    <title>Tech Blog</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient">
+        <div class="container-fluid">
+          <a class="navbar-brand " href="#">The Tech Blog</a>
+          
+          <div class=" navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+             
+              {{#if loggedIn}}
+          <li class="nav-item">
+                <a class="nav-link active" href="/">Home</a>
+              </li>
+         <li class="nav-item">
+                <a class="nav-link active" href="/dashboard">Dashboard</a>
+              </li>
+          <li class="nav-item">
+                <a class="nav-link active" id="logout" href="/">Logout</a>
+              </li>
+            {{else}}
+          <li class="nav-item">
+                <a class="nav-link active" href="/">Home</a>
+              </li>
+           <li class="nav-item">
+                <a class="nav-link active" href="/login">Login</a>
+              </li>
+            {{/if}}
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main  class="d-flex justify-content-center flex-column " >
         {{{body}}}
     </main>
-    {{#if logged_in}}
+     {{#if loggedIn}}
     <script src="/js/logout.js"></script>
     {{/if}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="/js/nav.js"></script>
-</body>
+
+  </body>
 </html>
