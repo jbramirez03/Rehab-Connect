@@ -35,6 +35,18 @@ User.init(
                 len: [6]
             }
         },
+        about: {
+            type: DataTypes.TEXT,
+        },
+        first_name: {
+            type: DataTypes.STRING,
+        },
+        last_name: {
+            type: DataTypes.STRING,
+        },
+        nickname: {
+            type: DataTypes.STRING
+        }
     },
     {
         hooks: {
