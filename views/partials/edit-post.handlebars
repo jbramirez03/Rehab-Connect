@@ -1,0 +1,50 @@
+<div class="card align mx-4 mt-4 bg-dark bg-gradient text-white customCard">
+  <div class="card-body">
+    <h4 class="card-title">
+      Edit Post
+    </h4>
+    <hr />
+    <form class="edit-post-form ">
+      <label class="form-label" for="post-title">Title</label>
+      <div class="input-group mb-3">
+        <input
+          name="post-title"
+          type="text"
+          class="form-control"
+          value="{{post.title}}"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+        />
+      </div>
+
+      <label class="form-label" for="content">Content</label>
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          name="content"
+          class="form-control"
+          value="{{post.content}}"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+        />
+      </div>
+      <div class="d-grid gap-2">
+        <button
+          id="update-post-btn"
+          type="submit"
+          class="btn btn btn-secondary"
+        >Update Post</button>
+      </div>
+      <div class="d-grid gap-2">
+        <button
+          type="button"
+          id="delete-post-btn"
+          class="btn btn btn-secondary my-3"
+        >Delete</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/js/edit-post.js"></script>
+<script src="/js/delete-post.js"></script>
