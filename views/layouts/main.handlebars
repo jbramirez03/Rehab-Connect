@@ -11,12 +11,17 @@
 <body>
     <nav>
     <div class="nav-wrapper">
+<<<<<<< HEAD
       <a href="#" class="brand-logo">Rehab-Connect</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
+=======
+      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+>>>>>>> 80685ed110bf3216268505d021f6c6c4a4d56ab1
         {{#if logged_in}}
         <li><a href="/">Home</a></li>
         <li><a id="logout" href="#">Logout</a></li>
-        <li><a href="/post">Post</a></li>
         {{else}}
         <li><a href="/login">Login</a></li>
         <li><a href="/signup">Signup</a></li>
@@ -24,11 +29,24 @@
       </ul>
     </div>
   </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    {{#if logged_in}}
+        <li><a href="/">Home</a></li>
+        <li><a id="logout" href="#">Logout</a></li>
+        {{else}}
+        <li><a href="/login">Login</a></li>
+        <li><a href="/signup">Signup</a></li>
+        {{/if}}
+  </ul>
+
     <main>
         {{{body}}}
     </main>
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/js/nav.js"></script>
 </body>
 </html>
