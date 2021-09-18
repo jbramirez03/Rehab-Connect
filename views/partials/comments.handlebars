@@ -1,0 +1,21 @@
+<div>
+  {{#each this}}
+    <div class="card
+          align
+          mx-4
+          mt-4
+          bg-dark bg-gradient
+          text-white
+          customCard">
+        <h4 class="card-header"></h4>
+        <section class="card-body">
+            <div>
+                {{comment_text}}
+            </div>
+            <div>
+                {{user.username}}, {{format_date created_at}}
+            </div>
+        </section>
+    </div>
+  {{/each}}
+</div>
