@@ -1,0 +1,55 @@
+{{!-- <section>
+    {{> milestone-details}}
+    {{> post-details}}
+
+    <div>
+        <h2>Add your story to this milestone:</h2>
+        <form id="post-form">
+            <div>
+                <label for="post-text">Your story here:</label>
+                <input type="text" id="post-text">
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</section> --}}
+<div class="card align mx-4 mt-4 bg-dark bg-gradient text-white customCard">
+  <div class="card-body">
+    <h4 class="card-title">
+      Create New Post
+    </h4>
+    <hr />
+    <form id="new-post-form" class="card-body">
+      <label class="form-label" for="post-title">Title</label>
+      <div class="input-group mb-3">
+        <input
+          id="post-title"
+          name="post-title"
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+        />
+      </div>
+
+      <label class="form-label" for="content">Content</label>
+      <div class="input-group mb-3">
+        <input
+          id="content"
+          name="content"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+        />
+      </div>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn btn-secondary">Create</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/js/add-post.js"></script>
+{{!-- <script src="/js/post.js"></script> --}}

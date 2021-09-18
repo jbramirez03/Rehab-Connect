@@ -1,20 +1,47 @@
-<div>
-    <div>
-        <h2>Login</h2>
+<div
+  class="card
+          align
+          mx-4
+          mt-4
+          bg-dark bg-gradient
+          text-white
+          customCard"
+>
+  <div class="card-body">
+    <h4 class="card-title">
+      Login
+    </h4>
+    <hr />
+    <form id="login-form" class="card-body">
+      <label class="form-label" for="username-login">Username</label>
+      <div class="input-group mb-3">
+        <input
+          id="username-login"
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+        />
+      </div>
 
-        <form id="login-form">
-            <div>
-                <label for="username-login">username:</label>
-                <input type="text" id="username-login" />
-            </div>
-            <div>
-                <label for="password-login">password:</label>
-                <input type="password" id="password-login" />
-            </div>
-            <div>
-                <button type="submit">login</button>
-            </div>
-        </form>
-    </div>
+      <label class="form-label" for="password-login">Password</label>
+      <div class="input-group mb-3">
+        <input
+          id="password-login"
+          autocomplete="current-password"
+          type="password"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+        />
+      </div>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn btn-secondary">Login!</button>
+      </div>
+      <br />
+      <a class="login-link text-decoration-none" href="/signup">Sign up instead</a>
+    </form>
+  </div>
 </div>
+
 <script src="/js/login.js"></script>
