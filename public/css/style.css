@@ -1,10 +1,11 @@
 body {
   font-family: "Amiri", serif;
   /* font-family: "Cinzel", serif; */
-  background-image: url("/images/rehab.jpg");
+  /* background-image: url("/images/rehab.jpg"); */
+  background-color: #c8d8e4;
   background-size: cover;
   height: 100vh;
-  color: white;
+  color: rgb(34, 33, 33);
 }
 .navbar-brand {
   font-size: 1.5rem;
@@ -18,8 +19,8 @@ body {
 }
 
 a {
-  color: rgb(247, 242, 242);
-  text-shadow: 2px 2px 8px #000000;
+  color: rgb(34, 33, 33);
+  /* text-shadow: 2px 2px 8px #000000; */
 }
 
 #phone {
