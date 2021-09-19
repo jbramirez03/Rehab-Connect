@@ -3,9 +3,9 @@ const editFormHandler = async event => {
   
     const post_text = document.querySelector('#post-text').value.trim();
   
-    const post_id = window.location.pathname.split("/").pop();
+    const id = window.location.pathname.split("/").pop();
   
-    const response = await fetch(`/api/posts/${post_id}`, {
+    const response = await fetch(`/api/posts/${id}`, {
       method: "PUT",
       body: JSON.stringify({
         post_text
