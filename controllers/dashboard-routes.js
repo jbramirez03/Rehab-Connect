@@ -5,23 +5,20 @@ const withAuth = require("../utils/auth");
 
 router.get("/", withAuth, async (req, res) => {
   try {
-    const dbPostsData = await Post.findAll({
-      where: {
-        user_id: req.session.user_id,
-      },
-      attributes: ["user_id", "id", "post_text", "date_created"],
-      include: [
-        {
-          model: User,
-          attributes: ["username"],
-        },
-      ],
-    });
+    const userData = await User.findByPk(req.session.user_id,
+      {
+        include: {
+          model: Post,
+          attributes: ["user_id", "id", "post_text", "date_created"],
+          include: {
+            model: User,
+            attributes: ['username']
+          }
+        }
+      });
 
-    const posts = dbPostsData.map(post =>
-      post.get({ plain: true })
-    );
-    res.render("dashboard", { posts, logged_in: true });
+      const user = userData.get({plain: true});
+    res.render("dashboard", { ...user, logged_in: true });
     // console.log(posts);
   } catch (err) {
     console.log(err);
