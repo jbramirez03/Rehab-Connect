@@ -46,6 +46,10 @@ User.init(
         },
         nickname: {
             type: DataTypes.STRING
+        },
+        isPrivate: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: false
         }
     },
     {
