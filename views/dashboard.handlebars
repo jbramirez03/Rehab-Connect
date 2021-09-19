@@ -1,12 +1,14 @@
 <div class="card
+
           align
           mx-4
           mt-4
           bg-dark bg-gradient
           text-white
-          customCard">
+          customCard "  style="width: 18rem;">
+            <img src="https://www.fillmurray.com/640/360" class="card-img-top" alt="...">
         <h4 class="card-header"></h4>
-        <section class="card-body">
+        <section class="card-body ">
             {{#if isPrivate}}
             <div>
                 <p>{{first_name}} {{last_name}} ({{nickname}})</p>
@@ -28,6 +30,7 @@
                 <p>Contact me: {{email}}</p>
             </div>
             {{/if}}
+             <a href="#" class="btn btn-primary">Profile</a>
         </section>
     </div>
 

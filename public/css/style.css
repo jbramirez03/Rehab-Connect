@@ -11,6 +11,7 @@ body {
 }
 .customCard {
   opacity: 0.9;
+  padding: 0px;
 }
 .user-comment {
   font-size: 1.3rem;
