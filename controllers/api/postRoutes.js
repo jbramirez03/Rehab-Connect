@@ -28,7 +28,7 @@ router.put("/:id", async (req, res) => {
       }
     );
   
-      if (!userData) {
+      if (!postData) {
         res.status(404).json({ message: "No post found with this id" });
         return;
       }
