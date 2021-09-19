@@ -39,12 +39,12 @@ router.get("/edit/:id", withAuth, async (req, res) => {
     });
 
     if (!dbPostData) {
-      res.status(404).json({ message: "No milestone found with this id" });
+      res.status(404).json({ message: "No Post found with this id" });
       return;
     }
 
     const post = dbPostData.get({ plain: true });
-    // res.render("edit-milestone", { post, loggedIn: true });
+    res.render("edit-post", { ...post, logged_in: true });
     console.log(post);
   } catch (err) {
     console.log(err);
