@@ -36,7 +36,7 @@ router.post("/login", async (req, res) => {
     const validPassword = await userData.checkPassword(req.body.password);
 
     if(!validPassword) {
-        res.status(400).json({message: 'Incorrect username or password, please try again'});
+        res.status(401).json({message: 'Incorrect username or password, please try again'});
         return;
     }
 
@@ -63,7 +63,15 @@ router.post('/logout', (req, res) => {
 
 router.put("/:id", async (req, res) => {
   try {
-    const userData = await User.update(req.body, {
+    const {username, first_name, last_name, email, nickname, about} = req.body;
+    const userData = await User.update({
+      username,
+      first_name,
+      last_name,
+      email,
+      nickname, 
+      about
+    }, {
       individualHooks: true,
       where: {
         id: req.session.user_id,

@@ -87,7 +87,8 @@ router.get('/profile', async (req, res) => {
       const user = (await userData).get({ plain: true });
       // console.log(user);
       res.render('profile', {
-        ...user
+        ...user,
+        logged_in: req.session.logged_in
       });
       return;
     }
