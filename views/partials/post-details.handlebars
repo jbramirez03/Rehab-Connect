@@ -14,7 +14,7 @@
                 {{post.post_text}}
             </div>
             <div>
-                {{post.user.username}}, {{format_date post.date_created}}
+                <a href="/user/{{post.user.id}}">{{post.user.username}}</a>, {{format_date post.date_created}}
             </div>
         </section>
     </div>
