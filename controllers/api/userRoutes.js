@@ -110,10 +110,13 @@ router.delete('/', async (req, res) => {
       },
     });
 
-    if (!dbUserData) {
+    if (!userData) {
       res.status(404).json({ message: 'No user found with this id' });
       return;
-    }
+    };
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
     res.json(userData);
   } catch (err) {
     console.log(err);
