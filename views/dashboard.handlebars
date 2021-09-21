@@ -9,16 +9,6 @@
             <img src="https://www.fillmurray.com/640/360" class="card-img-top" alt="...">
         <h4 class="card-header"></h4>
         <section class="card-body ">
-            {{#if isPrivate}}
-            <div>
-                <p>{{first_name}} {{last_name}} ({{nickname}})</p>
-            </div>
-            <div>
-                <p>About me:<br>
-                    {{about}}</p>
-            </div>
-            <div>
-                {{else}}
                 <div>
                 <p>{{first_name}} {{last_name}} ({{nickname}})</p>
             </div>
@@ -29,7 +19,6 @@
             <div>
                 <p>Contact me: {{email}}</p>
             </div>
-            {{/if}}
              <a href="/profile" class="btn btn-primary">Profile</a>
         </section>
     </div>
