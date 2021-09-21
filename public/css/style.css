@@ -27,16 +27,6 @@ a {
 text-decoration: none;
 }
 
-/* .photo {
-  width: 50%;
-  
-}
-
-.flex-box {
-  display: flex;
-  flex-direction: row;
-} */
-
 a:hover {
   color: rgb(34, 33, 33);
 }

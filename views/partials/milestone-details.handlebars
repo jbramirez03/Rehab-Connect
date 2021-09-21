@@ -6,12 +6,13 @@
           bg-light
           text-black
           customCard position-relative">
-  <div class="card-header">
+       <a class="text-decoration-none card-header" href="/milestone/{{id}}">
+  
     <h4 class="float-start">
-      <a class="text-decoration-none" href="/milestone/{{id}}">{{name}}</a>
+      {{name}}
     </h4>
-  </div>
-  <hr />
+  </a>
+  {{!-- <hr /> --}}
   <p class="card-body">{{description}}</p>
 
   <div class="position-absolute bottom-0 end-0">
@@ -19,3 +20,5 @@
   </div>
 
 </div>
+
+      {{!-- <a class="text-decoration-none" href="/milestone/{{id}}"></a> --}}
