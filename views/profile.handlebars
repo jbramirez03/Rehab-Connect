@@ -1,33 +1,43 @@
 <section>
-     <form id="profile-form" class="card-body">
-      
-      <label class="form-label" for="username-edit">Username</label>
-      <div class="input-group mb-3">
-         <textarea class="form-control" id="username-edit" rows="1">{{username}}</textarea>
-      </div>
-        <label class="form-label" for="firstName-edit">First-name</label>
-      <div class="input-group mb-3">
-         <textarea class="form-control" id="firstName-edit" rows="1">{{first_name}}</textarea>
-      </div>
-        <label class="form-label" for="lastName-edit">Last-name</label>
-      <div class="input-group mb-3">
-         <textarea class="form-control" id="lastName-edit" rows="1">{{last_name}}</textarea>
-      </div>
-        <label class="form-label" for="email-edit">Email</label>
-      <div class="input-group mb-3">
-         <textarea class="form-control" id="email-edit" rows="1">{{email}}</textarea>
-      </div>
-        <label class="form-label" for="nickname-edit">Nickname</label>
-      <div class="input-group mb-3">
-         <textarea class="form-control" id="nickname-edit" rows="1">{{nickname}}</textarea>
-      </div>
-        <label class="form-label" for="about-edit">About:</label>
-      <div class="input-group mb-3">
-         <textarea class="form-control" id="about-edit" rows="2">{{about}}</textarea>
-      </div>
-      <div class="d-grid gap-2">
-        <button type="submit" class="btn btn btn-secondary">Update</button>
-      </div>
-      </form>
+  <form id="profile-form" class="card-body">
+
+    <label class="form-label" for="username-edit">Username</label>
+    <div class="input-group mb-3">
+      <textarea class="form-control" id="username-edit" rows="1">{{username}}</textarea>
+    </div>
+    <label class="form-label" for="firstName-edit">First-name</label>
+    <div class="input-group mb-3">
+      <textarea class="form-control" id="firstName-edit" rows="1">{{first_name}}</textarea>
+    </div>
+    <label class="form-label" for="lastName-edit">Last-name</label>
+    <div class="input-group mb-3">
+      <textarea class="form-control" id="lastName-edit" rows="1">{{last_name}}</textarea>
+    </div>
+    <label class="form-label" for="email-edit">Email</label>
+    <div class="input-group mb-3">
+      <textarea class="form-control" id="email-edit" rows="1">{{email}}</textarea>
+    </div>
+    <label class="form-label" for="nickname-edit">Nickname</label>
+    <div class="input-group mb-3">
+      <textarea class="form-control" id="nickname-edit" rows="1">{{nickname}}</textarea>
+    </div>
+    <label class="form-label" for="about-edit">About:</label>
+    <div class="input-group mb-3">
+      <textarea class="form-control" id="about-edit" rows="2">{{about}}</textarea>
+    </div>
+    <div class="form-check">
+      {{#if isPrivate}}
+      <input class="form-check-input" type="checkbox" value="" id="private-edit" checked>
+      {{else}}
+      <input class="form-check-input" type="checkbox" value="" id="private-edit">
+      {{/if}}
+      <label class="form-check-label" for="private-edit">
+        Do you want your account to be private?
+      </label>
+    </div>
+    <div class="d-grid gap-2">
+      <button type="submit" class="btn btn btn-secondary">Update</button>
+    </div>
+  </form>
 </section>
 <script src="/js/edit-user.js"></script>
