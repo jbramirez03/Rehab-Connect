@@ -27,6 +27,16 @@ a {
 text-decoration: none;
 }
 
-#phone:hover {
-  color:rgb(255, 255, 255);
+.photo {
+  width: 50%;
+  
+}
+
+.flex-box {
+  display: flex;
+  flex-direction: row;
+}
+
+a:hover {
+  color: rgb(34, 33, 33);
 }
