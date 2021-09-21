@@ -7,6 +7,7 @@ const editFormHandler = async event => {
     const email = document.querySelector('#email-edit').value.trim();
     const nickname = document.querySelector('#nickname-edit').value.trim();
     const about = document.querySelector('#about-edit').value.trim();
+    const isPrivate = document.querySelector('#private-edit').checked;
 
   
     const id = window.location.pathname.split("/").pop();
@@ -19,7 +20,8 @@ const editFormHandler = async event => {
         last_name,
         email,
         nickname,
-        about
+        about,
+        isPrivate
       }),
       headers: {
         "Content-Type": "application/json",

@@ -63,14 +63,15 @@ router.post('/logout', (req, res) => {
 
 router.put("/:id", async (req, res) => {
   try {
-    const {username, first_name, last_name, email, nickname, about} = req.body;
+    const {username, first_name, last_name, email, nickname, about, isPrivate} = req.body;
     const userData = await User.update({
       username,
       first_name,
       last_name,
       email,
       nickname, 
-      about
+      about,
+      isPrivate
     }, {
       individualHooks: true,
       where: {
