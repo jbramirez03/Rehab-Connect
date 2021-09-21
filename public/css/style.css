@@ -27,7 +27,7 @@ a {
 text-decoration: none;
 }
 
-.photo {
+/* .photo {
   width: 50%;
   
 }
@@ -35,7 +35,7 @@ text-decoration: none;
 .flex-box {
   display: flex;
   flex-direction: row;
-}
+} */
 
 a:hover {
   color: rgb(34, 33, 33);
