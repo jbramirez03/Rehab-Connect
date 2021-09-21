@@ -27,6 +27,11 @@ a {
 text-decoration: none;
 }
 
+<<<<<<< HEAD
+/* #phone:hover {
+  color:rgb(236, 125, 125);
+} */
+=======
 .photo {
   width: 50%;
   
@@ -40,3 +45,4 @@ text-decoration: none;
 a:hover {
   color: rgb(34, 33, 33);
 }
+>>>>>>> 98a19a7a255484af6ecb2f3072079df1994d1732
