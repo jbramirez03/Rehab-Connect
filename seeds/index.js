@@ -2,17 +2,17 @@ const sequelize = require('../config/connection');
 const seedMilestones = require('./milestonesData');
 
 const seedAll = async () => {
-    try {
-        await sequelize.sync({ force: true });
+  try {
+    await sequelize.sync({ force: true });
 
-        await seedMilestones();
+    await seedMilestones();
 
-        process.exit();
-    } catch (err) {
-        if(err){
-            throw err;
-        }
+    process.exit();
+  } catch (err) {
+    if (err) {
+      throw err;
     }
+  }
 };
 
 seedAll();
