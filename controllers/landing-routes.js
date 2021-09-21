@@ -1,33 +1,10 @@
 const router = require('express').Router();
+
 const { Post, Milestone, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
-  try {
-    const milestonesData = await Milestone.findAll({
-      include: [
-        {
-          model: Post,
-          attributes: ['post_text', 'date_created', 'user_id', 'milestone_id'],
-          include: [
-            {
-              model: User,
-              attributes: ['username', 'id'],
-            },
-          ],
-        },
-      ],
-    });
-    const milestones = milestonesData.map((milestone) =>
-      milestone.get({ plain: true }),
-    );
-    res.render('homepage', {
-      milestones,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.json(err);
-  }
+router.get('/', (req, res) => {
+  res.render('landing');
 });
 
 router.get('/milestone/:id', withAuth, async (req, res) => {
@@ -62,13 +39,18 @@ router.get('/milestone/:id', withAuth, async (req, res) => {
   }
 });
 
-router.get('/login', (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect('/home');
-    return;
+router.get('/user/:id', async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.params.id);
+    const user = userData.get({ plain: true });
+    res.render('userProfile', {
+      ...user,
+      logged_in: req.session.logged_in,
+    });
+    // console.log(user);
+  } catch (err) {
+    res.status(500).json(err);
   }
-
-  res.render('login');
 });
 
 router.get('/signup', (req, res) => {
@@ -78,6 +60,15 @@ router.get('/signup', (req, res) => {
   }
 
   res.redirect('/home');
+});
+
+router.get('/login', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/home');
+    return;
+  }
+
+  res.render('login');
 });
 
 router.get('/profile', async (req, res) => {
@@ -93,20 +84,6 @@ router.get('/profile', async (req, res) => {
       return;
     }
     res.redirect('/login');
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get('/user/:id', async (req, res) => {
-  try {
-    const userData = await User.findByPk(req.params.id);
-    const user = userData.get({ plain: true });
-    res.render('userProfile', {
-      ...user,
-      logged_in: req.session.logged_in,
-    });
-    // console.log(user);
   } catch (err) {
     res.status(500).json(err);
   }
