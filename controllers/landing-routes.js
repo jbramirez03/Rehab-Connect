@@ -4,7 +4,10 @@ const { Post, Milestone, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
-  res.render('landing');
+  res.render('landing',
+  {
+    logged_in: req.session.logged_in
+  });
 });
 
 router.get('/milestone/:id', withAuth, async (req, res) => {
