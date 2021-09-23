@@ -30,3 +30,7 @@ text-decoration: none;
 a:hover {
   color: rgb(34, 33, 33);
 }
+
+.stories {
+  margin-top: 7rem;
+}
