@@ -14,6 +14,11 @@ body {
   opacity: 0.9;
   padding: 0px;
 }
+
+#logo-text {
+  color: rgb(46, 131, 228);
+}
+
 .user-comment {
   font-size: 1.3rem;
 }
