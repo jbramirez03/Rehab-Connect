@@ -4,6 +4,10 @@
 [QLinkedIn]: https://www.linkedin.com/in/qabas-al-ani-7b858863/
 [Github]: https://github.com/jbramirez03
 [QGithub]: https://github.com/Qabas-al-ani
+[TaoufikGit]: https://github.com/lbladma
+[TaoufikLinkedin]: https://www.linkedin.com/in/taoufik-a-179292211/
+[ChrisGithub]: https://github.com/chrisclary20
+[ChrisLinkedIn]: https://www.linkedin.com/in/christopher-clary-2764b216a/
 <!-- ![license-badge](https://img.shields.io/badge/License-MIT-blueviolet)
 ![followers](https://img.shields.io/github/followers/jbramirez03?style=social) -->
 
@@ -34,14 +38,26 @@ A project manager tool was used in order to keep track of what everyone on the t
 ## Usage
 
 In order to begin adding your story to a milestone you must first create an account, this is done through the sign up page and after you create your account you are automatically logged in. Once you click on any specific milestone you can then add your story and through the form at the bottom of the page. Be sure to stay honest and remember that others on the site are going through the same hardships as you.
-<img width="1440" alt="Homepage" src="https://user-images.githubusercontent.com/82244776/133912907-e6e2dd45-6da4-419c-a14c-5066195eae9f.png">
+### Landing page
+<img width="1440" alt="Landing page" src="https://user-images.githubusercontent.com/82244776/134752201-44bc9475-2624-41ed-8cad-32ad2558f46c.png">
+
+### Milestones
+<img width="1440" alt="Milestones page" src="https://user-images.githubusercontent.com/82244776/134752244-f6131b79-0ae7-429f-898a-8e4ff16b08cb.png">
+
+### Profile
+<img width="1440" alt="Screen Shot 2021-09-24 at 8 41 51 PM" src="https://user-images.githubusercontent.com/82244776/134752268-cc7c7f4e-b056-4aff-989f-c007cd3ccff8.png">
 
 ## Credits
 
 [Jason Barrera-Ramirez][linkedin]<br>
 [<img aling="left" width="26px" alt="github" src="https://user-images.githubusercontent.com/82244776/133912782-7a9a5cba-b828-4524-9cdd-bae9ef1876a6.png">][github]<br>
 [Qabas-al-ani][qlinkedin]<br>
-[<img aling="left" width="26px" alt="github" src="https://user-images.githubusercontent.com/82244776/133912782-7a9a5cba-b828-4524-9cdd-bae9ef1876a6.png">][qgithub]
+[<img aling="left" width="26px" alt="github" src="https://user-images.githubusercontent.com/82244776/133912782-7a9a5cba-b828-4524-9cdd-bae9ef1876a6.png">][qgithub]<br>
+[Taoufik][TaoufikLinkedIn]<br>
+[<img aling="left" width="26px" alt="github" src="https://user-images.githubusercontent.com/82244776/133912782-7a9a5cba-b828-4524-9cdd-bae9ef1876a6.png">][TaoufikGit]<br>
+[Chris][ChrisLinkedIn]<br>
+[<img aling="left" width="26px" alt="github" src="https://user-images.githubusercontent.com/82244776/133912782-7a9a5cba-b828-4524-9cdd-bae9ef1876a6.png">][ChrisGithub]
+
 
 ## License
 
@@ -54,14 +70,24 @@ Another issue run into was creating handler functions to deal with a log-in post
 
 ## Technologies
 
-<img align="left" width="26px" alt="Node.js" src="https://user-images.githubusercontent.com/82244776/131235189-bd5f5fc2-6802-4f79-b553-267a05f37ab3.png">
-<img align="left" width="26px" alt="Html" src="https://user-images.githubusercontent.com/82244776/133912822-b482c9dd-fa70-4f88-9ac0-87b325622af4.png"> 
-<img align="left" width="27px" alt="mysql" src="https://user-images.githubusercontent.com/82244776/131235260-c522d5d8-e58d-4bd9-82ec-a3cc3c119ccd.png">
-<img align="left" width="26px" alt="express" src="https://user-images.githubusercontent.com/82244776/132081029-26f8074c-5c16-40d1-999f-9ee7a64ceb7d.png">
-<img align="left" width="26px" alt="heroku" src="https://user-images.githubusercontent.com/82244776/133912593-37882922-8960-40d0-9fe7-840f996f3abf.png">
-<img align="left" width="26px" alt="materialize" src="https://user-images.githubusercontent.com/82244776/133912640-b5396a53-3448-4774-af12-00cff7bbdb0f.jpeg">
-<img align="left" width="26px" alt="Javascript" src="https://user-images.githubusercontent.com/82244776/128645657-2dad4760-43e6-42a9-90a5-8f8b3f62b4a0.png"><br><br>
+[<img align="left" width="26px" alt="javascript" src="https://user-images.githubusercontent.com/82244776/132110201-fd810d53-561a-490f-a690-1735d4479281.png">][javascript]
+[<img align="left" width="26px" alt="CSS" src="https://user-images.githubusercontent.com/82244776/132110242-a351f140-471c-4447-a513-91c2b8a166d7.png">][CSS]
+[<img align="left" width="26px" alt="html" src="https://user-images.githubusercontent.com/82244776/132110258-65db95d8-f35b-4a2d-a091-8051a6b6f4f2.png">][html]
+[<img align="left" width="26px" alt="nodejs" src="https://user-images.githubusercontent.com/82244776/134751947-5908a635-9d69-4dc7-8c4c-aeb9ea0fce66.png">][node]
+[<img align="left" width="26px" alt="mysql" src="https://user-images.githubusercontent.com/82244776/132110331-da9891ba-5eef-44c3-87db-869b91f34702.png">][mysql]
+[<img align="left" width="26px" alt="heroku" src="https://user-images.githubusercontent.com/82244776/132110346-720c197f-d193-4c6f-b84d-e9dc0420bba9.png">][heroku]
+[<img align="left" width="26px" alt="bootstrap" src="https://user-images.githubusercontent.com/82244776/134751737-53bbac67-b5a8-486d-a009-ca59d3e26e6b.png">][bootstrap]
+[<img align="left" width="26px" alt="github" src="https://user-images.githubusercontent.com/82244776/132110367-f5e3b9f5-b3cb-49c1-be7c-aded0df1b8c1.png">][github]<br><br>
 
+
+[javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[CSS]: https://developer.mozilla.org/en-US/docs/Web/CSS
+[html]: https://developer.mozilla.org/en-US/docs/Web/HTML
+[node]: https://nodejs.org/en/docs/
+[mysql]: https://dev.mysql.com/doc/
+[heroku]: https://devcenter.heroku.com/categories/reference
+[github]: https://docs.github.com/en
+[bootstrap]: https://getbootstrap.com/
 ## Npm Packages
 
 - dotenv
