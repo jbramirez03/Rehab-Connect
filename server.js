@@ -25,7 +25,7 @@ const sess = {
 };
 
 app.use(session(sess));
-
+// switch the render engine to the handlebars
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
