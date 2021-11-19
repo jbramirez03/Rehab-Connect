@@ -4,9 +4,8 @@ const { Post, Milestone, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
-  res.render('landing',
-  {
-    logged_in: req.session.logged_in
+  res.render('landing', {
+    logged_in: req.session.logged_in,
   });
 });
 

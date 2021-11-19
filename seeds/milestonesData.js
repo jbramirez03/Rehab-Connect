@@ -28,9 +28,9 @@ const milestoneData = [
   },
   {
     name: '10 Years - A New Lifestyle',
-    description: 
+    description:
       "With this new life that you have created for yourself, through all the hardhips, the limit to what you want to achieve moving forward depends strictly on you, you have made it this far and have show to not only your friends and family but most importantly yourself that having a goal and staying dedicated can make all the difference to changing one's life around.",
-  }
+  },
 ];
 
 const seedMilestones = () => Milestone.bulkCreate(milestoneData);
